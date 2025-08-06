@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +52,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				electric: {
+					blue: 'hsl(var(--electric-blue))',
+					green: 'hsl(var(--electric-green))',
+					yellow: 'hsl(var(--voltage-yellow))',
+					orange: 'hsl(var(--current-orange))',
+					purple: 'hsl(var(--resistance-purple))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -84,11 +92,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'electric-pulse': {
+					'0%, 100%': { opacity: '1', transform: 'scale(1)' },
+					'50%': { opacity: '0.8', transform: 'scale(1.05)' }
+				},
+				'current-flow': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'electric-pulse': 'electric-pulse 2s ease-in-out infinite',
+				'current-flow': 'current-flow 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-electric': 'var(--gradient-electric)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'electric': 'var(--shadow-electric)'
 			}
 		}
 	},
